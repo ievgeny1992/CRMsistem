@@ -1,14 +1,156 @@
 @import 'normalize';
 @import 'flexboxgrid';
-// @import 'media';
+@import 'media';
+// @import 'burger-menu';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&subset=cyrillic-ext');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic-ext');
 
-@import url('//fonts.googleapis.com/css?family=PT+Sans:400,700');
-@import url('//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
-
 @header-font: 'Roboto Slab', serif;
-@header-font: 'Roboto', serif;
+@regular-font: 'Roboto', serif;
 
-@header-top-color: #5b1dcd;
+@primary-color: #e23d41;
+
+body{
+    font-family: @regular-font;
+}
+
+.wrap {
+    box-sizing: border-box;
+    max-width: 1280px;
+    margin: 0px auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.page-number{
+    font-weight: 500;
+    font-family: @header-font;
+    width: 35px;
+    text-align: right;
+    &__current{
+        display: block;
+        font-size: 20px;
+        padding: 3px 0px;
+        border-bottom: 2px solid #000;
+    }
+
+    &__all{
+        display: block;
+        font-size: 13px;
+        padding: 3px 0px;
+    }
+}
+
+.header{
+    position: relative;
+    background: url(../img/header_bg.jpg) no-repeat top center;
+    background-size: cover;
+    background-color: #f3f3f3;
+    
+    @media @desktop{
+        background: url(../img/header_bg.jpg) no-repeat top right;
+        background-color: #f3f3f3;
+    }
+
+    &__title{
+        font-family: @header-font;
+        color: #000;
+        text-align: center;
+        font-size: 60px;
+        @media @desktop{
+            font-size: 70px;
+            text-align: left;
+        }
+        font-weight: 700;
+
+        &_highlight{
+            color: @primary-color;
+        }
+    }
+}
+
+.topheader_wrapper{
+    padding: 30px 0px;
+
+    @media @desktop{
+        padding: 120px 0px 150px;
+    }
+}
+
+.sale{
+    background-color: #fff;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    &:after{
+        font-family: @header-font;
+        position: absolute;
+        top: 150px;
+        left: 35%;
+        color: #f3f3f3;
+        font-size: 600px;
+        font-weight: 700;
+        content: "sales";
+    }
+
+    &__title{
+        position: relative;
+        font-family: @header-font;
+        color: #000;
+        font-size: 30px;
+        padding-bottom: 20px;
+
+        @media @desktop {
+            font-size: 48px;
+            text-align: left;
+        }
+
+        &:after{
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:30%;
+            border-top: 3px solid @primary-color;
+            content:"";
+        }
+    }
+
+    &__wrap{
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.sale-item{
+    padding: 30px 0px;
+
+    &__box{
+        background-color: @primary-color;
+        width: 150px;
+        height: 150px;
+        padding: 15px;
+        box-sizing: border-box;
+        margin: 0 auto;
+
+        @media @tablet{
+            margin: 0;
+        }
+    }
+
+    &__count{
+        font-family: @header-font;
+        font-weight: 700;
+        font-size: 34px;
+        margin-bottom: -6px;
+        display: block;
+        color: @primary-color;
+    }
+
+    &__text{
+        font-weight: 100;
+        padding: 10px 0px;
+        line-height: 23px;
+    }
+}

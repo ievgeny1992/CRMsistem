@@ -6,24 +6,105 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel=icon href="img/favicon.png" type="image/png">
+    <link rel=icon href="img/favicon.svg" sizes="any" type="image/svg+xml">
+
     <title>CRMsistem</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
     <!--CSS-->
-
 </head>
 <body>
-
-<div class="container">
-    <div class="row">
-        <div class="md-col-12">
-            <h1>
+<section class="header">
+    <div class="wrap container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
                 
-            </h1>
+            </div>
+            <div class="col-xs-6">
+                <div class="row end-xs">
+                    <div class="page-number">
+                        <span class="page-number__current">
+                            01
+                        </span>
+                        <span class="page-number__all">
+                            07
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-xs-12">
+                <div class="topheader_wrapper">
+                    <h1 class="header__title">
+                        Откроем Вам бизнес в Турции за <span class="header__title_highlight">30</span> дней
+                    </h1>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="sale">
+    <div class="wrap container-fluid">
+        <div class="row end-xs">
+            <div class="page-number">
+                <span class="page-number__current">
+                    02
+                </span>
+                <span class="page-number__all">
+                    07
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-xs-12">
+                <h2 class="sale__title">
+                    Продажа товаров через интернет
+                </h2>
+            </div>
+        </div>
+        <div class="row sale__wrap start-sm center-xs">
+
+            <% const saleItems = [
+                {text: 'У вас есть товары.', image: 'box.svg', number: '01'},
+                {text: 'Они рекламируются на сайтах в интернете.', image: '02.svg', number: '02'},
+                {text: 'Клиенты делают заказы, ваш колл-центр обрабатывает их.', image: 'call-center.svg', number: '03'},
+                {text: 'Подтвержденные заказы клиентов отдаются на упаковку, а далее отправляются через курьерскую службу вашим клиентам.', image: 'clipboard.svg', number: '04'},
+                {text: 'При получении заказа клиент оплачивает его на месте курьеру.', image: 'ticket.svg', number: '05'},
+                {text: 'Курьер приносит деньги в курьерскую службу, а та в свою очередь переводит их вам на расчетный счет вашей компании.  ', image: '06.svg', number: '06'}
+            ]; %>
+
+            <% saleItems.forEach((item) => { %>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="sale-item">
+                        <span class="sale-item__count">
+                            <%= item.number %>
+                        </span>
+                        <div class="sale-item__box">
+                            <img src="img/<%= item.image %>" alt="ico_search">   
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 col-xs-12">
+                                <p class="sale-item__text">
+                                    <%= item.text %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap container-fluid">
+
+    </div>
+</section>
 
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/script.js"></script>
