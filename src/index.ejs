@@ -24,8 +24,8 @@
             </div>
             <div class="col-xs-6">
                 <div class="row end-xs">
-                    <div class="page-number">
-                        <span class="page-number__current">
+                    <div class="page-number page-number_black">
+                        <span class="page-number__current page-number__current_black">
                             01
                         </span>
                         <span class="page-number__all">
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-xs-12">
+            <div class="col-sm-8 col-xs-12">
                 <div class="topheader_wrapper">
                     <h1 class="header__title">
                         Откроем Вам бизнес в Турции за <span class="header__title_highlight">30</span> дней
@@ -50,8 +50,8 @@
 <section class="sale">
     <div class="wrap container-fluid">
         <div class="row end-xs">
-            <div class="page-number">
-                <span class="page-number__current">
+            <div class="page-number page-number_black">
+                <span class="page-number__current page-number__current_black">
                     02
                 </span>
                 <span class="page-number__all">
@@ -61,7 +61,7 @@
         </div>
         <div class="row">
             <div class="col-md-5 col-xs-12">
-                <h2 class="sale__title">
+                <h2 class="regular-title regular-title_black">
                     Продажа товаров через интернет
                 </h2>
             </div>
@@ -74,7 +74,7 @@
                 {text: 'Клиенты делают заказы, ваш колл-центр обрабатывает их.', image: 'call-center.svg', number: '03'},
                 {text: 'Подтвержденные заказы клиентов отдаются на упаковку, а далее отправляются через курьерскую службу вашим клиентам.', image: 'clipboard.svg', number: '04'},
                 {text: 'При получении заказа клиент оплачивает его на месте курьеру.', image: 'ticket.svg', number: '05'},
-                {text: 'Курьер приносит деньги в курьерскую службу, а та в свою очередь переводит их вам на расчетный счет вашей компании.  ', image: '06.svg', number: '06'}
+                {text: 'Курьер приносит деньги в курьерскую службу, а та в свою очередь переводит их вам на расчетный счет вашей компании.', image: '06.svg', number: '06'}
             ]; %>
 
             <% saleItems.forEach((item) => { %>
@@ -100,9 +100,72 @@
     </div>
 </section>
 
-<section>
+<section class="we-do">
     <div class="wrap container-fluid">
+        <div class="row end-xs">
+            <div class="page-number page-number_white">
+                <span class="page-number__current page-number__current_white">
+                    03
+                </span>
+                <span class="page-number__all">
+                    07
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-xs-12">
+                <h2 class="regular-title regular-title_white">
+                    Что конкретно делаем мы
+                </h2>
+            </div>
+        </div>
+        <div class="row center-xs we-do__wrap">
+            <% const wedoList = [
+                {text: 'Даем бесплатную консультацию о вашем будущем бизнесе'},
+                {text: 'Уточняем у вас о желаемых доходах от вашего бизнеса'},
+                {text: 'Рассчитываем, при каком количестве продаж вы можете получить такой доход'},
+                {text: 'Ищем для вас нужный товар, на который идет спрос'},
+                {text: 'Ищем трафик (заказы) на этот товар'},
+                {text: 'Обучаем ваших операторов профессиональным скриптам продаж и работе в системе'},
+                {text: 'Подключаем местные sms-провайдеры и телефонных операторов для выгодной работы'},
+                {text: 'Заключаем договор с курьерской службой, договариваемся об отправках'},
+                {text: 'Контролируем процесс получения вами отчетов от курьерской службы'},
+                {text: 'Обучаем ваших сотрудников делать сверки с курьерской службой'}
+            ]; %>
 
+            <% wedoList.forEach((item) => { %>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="we-do__item">
+                        <img src="img/frame.png" alt="frame" class="we-do__frame">
+                        <p class="we-do__text">
+                            <%= item.text %>
+                        </p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<section class="need-you">
+    <div class="wrap container-fluid">
+        <div class="row end-xs">
+            <div class="page-number page-number_black">
+                <span class="page-number__current page-number__current_black">
+                    04
+                </span>
+                <span class="page-number__all">
+                    07
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-xs-12">
+                <h2 class="regular-title regular-title_black">
+                    Минимум, нужный от вас
+                </h2>
+            </div>
+        </div>
     </div>
 </section>
 

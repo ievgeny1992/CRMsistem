@@ -28,17 +28,62 @@ body{
     font-family: @header-font;
     width: 35px;
     text-align: right;
+
+    &_black{
+        color: #000;
+    }
+
+    &_white{
+        color: #fff;
+    }
+
     &__current{
         display: block;
         font-size: 20px;
         padding: 3px 0px;
-        border-bottom: 2px solid #000;
+
+        &_black{
+            border-bottom: 2px solid #000;
+        }
+
+        &_white{
+            border-bottom: 2px solid #fff;
+        }
     }
 
     &__all{
         display: block;
         font-size: 13px;
         padding: 3px 0px;
+    }
+}
+
+.regular-title{
+    position: relative;
+    font-family: @header-font;
+    font-size: 30px;
+    padding-bottom: 20px;
+
+    @media @desktop {
+        font-size: 48px;
+        text-align: left;
+    }
+
+    &:after{
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:30%;
+        border-top: 3px solid @primary-color;
+        content:"";
+    }
+
+    &_black{
+        color: #000;
+    }
+
+    &_white{
+        color: #fff;
     }
 }
 
@@ -57,12 +102,16 @@ body{
         font-family: @header-font;
         color: #000;
         text-align: center;
-        font-size: 60px;
-        @media @desktop{
-            font-size: 70px;
+        font-size: 55px;
+        font-weight: 700;
+
+        @media @tablet{
             text-align: left;
         }
-        font-weight: 700;
+
+        @media @desktop{
+            font-size: 70px;
+        }
 
         &_highlight{
             color: @primary-color;
@@ -87,34 +136,13 @@ body{
     &:after{
         font-family: @header-font;
         position: absolute;
-        top: 150px;
+        top: 50%;
         left: 35%;
+        transform: translate(0, -50%);
         color: #f3f3f3;
         font-size: 600px;
         font-weight: 700;
         content: "sales";
-    }
-
-    &__title{
-        position: relative;
-        font-family: @header-font;
-        color: #000;
-        font-size: 30px;
-        padding-bottom: 20px;
-
-        @media @desktop {
-            font-size: 48px;
-            text-align: left;
-        }
-
-        &:after{
-            position:absolute;
-            bottom:0;
-            left:0;
-            width:30%;
-            border-top: 3px solid @primary-color;
-            content:"";
-        }
     }
 
     &__wrap{
@@ -153,4 +181,49 @@ body{
         padding: 10px 0px;
         line-height: 23px;
     }
+}
+
+.we-do{
+    position: relative;
+    background-color: #000;
+
+    &__wrap{
+        padding: 30px 0px;
+        margin: 0px -20px;
+    }
+
+    &__item{
+        position: relative;
+        padding: 20px 20px;
+        margin: 15px 0px;
+
+        @media @tablet{
+            margin: 15px;     
+        }
+    }
+
+    &__text{
+        color: #fff;
+        font-family: @regular-font;
+        font-size: 16px;
+        font-weight: 100;
+        text-align: center;
+        line-height: 30px;
+
+        @media @tablet{
+            font-size: 18px;
+        }
+    }
+
+    &__frame{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.need-you{
+    background-color: #fff;
 }
