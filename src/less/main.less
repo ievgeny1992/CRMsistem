@@ -61,10 +61,10 @@ body{
 .regular-title{
     position: relative;
     font-family: @header-font;
-    font-size: 30px;
+    font-size: 35px;
     padding-bottom: 20px;
 
-    @media @desktop {
+    @media @tablet {
         font-size: 48px;
         text-align: left;
     }
@@ -148,6 +148,10 @@ body{
     &__wrap{
         position: relative;
         z-index: 1;
+
+        & .col-md-4:last-child > .sale-item > .sale-item__box > .sale-item__arrow{
+            display: none;
+        }
     }
 }
 
@@ -155,6 +159,7 @@ body{
     padding: 30px 0px;
 
     &__box{
+        position: relative;
         background-color: @primary-color;
         width: 150px;
         height: 150px;
@@ -164,6 +169,18 @@ body{
 
         @media @tablet{
             margin: 0;
+        }
+    }
+
+    &__arrow{
+        position: absolute;
+        width: 80px;
+        top: 50%;
+        right: -150px;
+        display: none;
+
+        @media @tablet{
+            display: block;
         }
     }
 
@@ -186,10 +203,77 @@ body{
 .we-do{
     position: relative;
     background-color: #000;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     &__wrap{
+        position: relative;
+    }
+
+    &__wrap-items{
+        position: relative;
         padding: 30px 0px;
         margin: 0px -20px;
+    }
+
+    &__graph-img{
+        position: absolute;
+        width: 400px;
+        left: -450px;
+        top: 40%;
+        display: none;
+
+        @media @desktop{
+            display: block;
+        }
+    }
+
+    &__diagram-img{
+        position: absolute;
+        width: 200px;
+        right: -400px;
+        top: 25%;
+        display: none;
+
+        @media @desktop{
+            display: block;
+        }
+    }
+
+    &__diagram-circle-img{
+        position: absolute;
+        width: 200px;
+        right: -200px;
+        top: 65%;
+        display: none;
+
+        @media @desktop{
+            display: block;
+        }
+    }
+
+    &__3mans-img{
+        position: absolute;
+        width: 200px;
+        display: none;
+
+        @media @desktop{
+            display: block;
+            bottom: -53px;
+            left: 30px;
+        }
+    }
+
+    &__success-img{
+        position: absolute;
+        width: 400px;
+        top: 160px;
+        right: 150px;
+        display: none;
+
+        @media @desktop{
+            display: block;
+        }
     }
 
     &__item{

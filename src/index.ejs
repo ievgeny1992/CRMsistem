@@ -84,6 +84,7 @@
                             <%= item.number %>
                         </span>
                         <div class="sale-item__box">
+                            <img src="img/arrow_black.svg" alt="arrow_black" class="sale-item__arrow">
                             <img src="img/<%= item.image %>" alt="ico_search">   
                         </div>
                         <div class="row">
@@ -101,7 +102,11 @@
 </section>
 
 <section class="we-do">
-    <div class="wrap container-fluid">
+    <div class="wrap we-do__wrap container-fluid">
+        <img src="img/success.svg" alt="success" class="we-do__success-img">
+        <img src="img/graph1.svg" alt="graph" class="we-do__graph-img">
+        <img src="img/diagram2.svg" alt="diagram2" class="we-do__diagram-img">
+        <img src="img/diagram.svg" alt="diagram" class="we-do__diagram-circle-img">
         <div class="row end-xs">
             <div class="page-number page-number_white">
                 <span class="page-number__current page-number__current_white">
@@ -119,7 +124,8 @@
                 </h2>
             </div>
         </div>
-        <div class="row center-xs we-do__wrap">
+        <div class="row center-xs we-do__wrap-items">
+            <img src="img/mans_3block.svg" alt="mans_3block" class="we-do__3mans-img">
             <% const wedoList = [
                 {text: 'Даем бесплатную консультацию о вашем будущем бизнесе'},
                 {text: 'Уточняем у вас о желаемых доходах от вашего бизнеса'},
