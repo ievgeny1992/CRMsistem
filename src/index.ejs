@@ -140,7 +140,7 @@
             ]; %>
 
             <% wedoList.forEach((item) => { %>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12 we-do-list__wrap">
                     <div class="we-do__item">
                         <img src="img/frame.png" alt="frame" class="we-do__frame">
                         <p class="we-do__text">
@@ -169,6 +169,79 @@
             <div class="col-md-5 col-xs-12">
                 <h2 class="regular-title regular-title_black">
                     Минимум, нужный от вас
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 need-you__wrap">
+                <div class="need-you__left-block">
+                    <% const needYouList = [
+                        {text: 'Регистрация юридического лица (мы не начинаем работать с физлицами, доходы будут высокими)'},
+                        {text: 'Открытие банковского счета'},
+                        {text: 'Аренда офиса под колл-центр по нашим рекомендациям'}
+                    ]; %>
+
+                    <ul class="need-you-list">
+                        <% needYouList.forEach((item) => { %>
+                            <li class="need-you-list__item">
+                                    <%= item.text %>
+                            </li>
+                        <% }) %>
+                    </ul>
+                    <img src="img/vse.svg" alt="vse" class="need-you__vse">
+                    <p class="need-you__text">
+                        Остальное - ваше желание и готовность следовать нашим рекомендациям!
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12 need-you__wrap">
+                <div class="need-you__right-block">
+                    <h3 class="need-you__subtitle">
+                        О вашем будущем бизнесе схематично
+                    </h3>
+
+                    <% const futureBusinessList = [
+                        {text: 'Первоначальные взносы всего лишь'},
+                        {text: 'Возможное число отправок'},
+                        {text: 'Ваш ежемесячный расход'},
+                        {text: 'Ваш ежемесячный доход'},
+                        {text: 'Ваша чистая прибыль'}
+                    ]; %>
+
+                    <% futureBusinessList.forEach((item) => { %>
+                        <div class="row future-business">
+                            <div class="col-xs">
+                                <p class="future-business__text">
+                                    <%= item.text %>
+                                </p>
+                            </div>
+                            <div class="col-xs">
+                                <p>sdaadsa</p>
+                            </div>
+                        </div>  
+                    <% }) %>
+                </div>      
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-easy">
+    <div class="wrap container-fluid">
+        <div class="row end-xs">
+            <div class="page-number page-number_black">
+                <span class="page-number__current page-number__current_black">
+                    05
+                </span>
+                <span class="page-number__all">
+                    07
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-xs-12">
+                <h2 class="regular-title regular-title_black">
+                    Почему с нами легче?
                 </h2>
             </div>
         </div>

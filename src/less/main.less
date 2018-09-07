@@ -210,10 +210,14 @@ body{
         position: relative;
     }
 
+    &-list__wrap{
+        display: flex;
+        margin: 15px 0px;
+    }
+
     &__wrap-items{
         position: relative;
         padding: 30px 0px;
-        margin: 0px -20px;
     }
 
     &__graph-img{
@@ -279,11 +283,13 @@ body{
     &__item{
         position: relative;
         padding: 20px 20px;
-        margin: 15px 0px;
+        box-sizing: border-box;
+        width: 100%;
+        // margin: 15px 0px;
 
-        @media @tablet{
-            margin: 15px;     
-        }
+        // @media @tablet{
+        //     margin: 15px;     
+        // }
     }
 
     &__text{
@@ -310,4 +316,99 @@ body{
 
 .need-you{
     background-color: #fff;
+
+    @media @tablet{
+        padding-bottom: 65px;
+    }
+
+    &__wrap{
+        display: flex;
+    }
+
+    &__left-block{
+        margin-top: 35px;
+        padding: 20px 20px 20px 0px;
+        background-color: #fff;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__right-block{
+        margin-top: 35px;
+        padding: 20px;
+        background-color: #f3f3f3;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__subtitle{
+        font-family: @regular-font;
+        color: #000;
+        font-size: 20px;
+        position: relative;
+        padding-bottom: 16px;
+
+        &:after{
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:30%;
+            border-top: 3px solid @primary-color;
+            content:"";
+        }
+
+        @media @tablet {
+            font-size: 23px; 
+        }
+    }
+
+    &-list{
+        list-style-type: none;
+
+        &__item{
+            padding: 15px 0px 35px 0px;
+            line-height: 19px;
+            position: relative;
+            font-family: @regular-font;
+            font-weight: 100;
+            line-height: 25px;
+
+            &:before{
+                content: '';
+                background: url(../img/check.svg) no-repeat;
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                left: -39px;
+                top: -9px;
+            }
+        }
+    }
+
+    &__vse{
+        max-width: 200px;
+    }
+
+    &__text{
+        font-family: @regular-font;
+        font-weight: 100;
+        padding: 20px 0px 0px 0px;
+        margin: 0px;
+
+        @media @tablet {
+            padding: 40px 0px 0px 0px; 
+        }
+    }
+}
+
+.future-business{
+    &__text{
+        font-family: @regular-font;
+        font-weight: 100;
+        line-height: 25px;
+    }
+}
+
+.why-easy{
+    background: url(../img/why-easy-bg.jpg) no-repeat top center;
 }
