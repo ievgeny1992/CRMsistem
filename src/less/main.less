@@ -285,11 +285,6 @@ body{
         padding: 20px 20px;
         box-sizing: border-box;
         width: 100%;
-        // margin: 15px 0px;
-
-        // @media @tablet{
-        //     margin: 15px;     
-        // }
     }
 
     &__text{
@@ -335,7 +330,7 @@ body{
 
     &__right-block{
         margin-top: 35px;
-        padding: 20px;
+        padding: 20px 0px 20px 20px;
         background-color: #f3f3f3;
         width: 100%;
         box-sizing: border-box;
@@ -407,8 +402,129 @@ body{
         font-weight: 100;
         line-height: 25px;
     }
+
+    &__progress{
+        position: relative;
+        background-color: @primary-color;
+        height: 30px;
+        width: 100%;
+
+        &_full{
+            &:before{
+                content: '';
+                background: url(../img/infinite-sketch.svg) no-repeat;
+                position: absolute;
+                left: 10px;
+                top: 3px;
+                height: 25px;
+                width: 30px;
+            }
+        }
+    }
+}
+
+.progress__wrap{
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
 }
 
 .why-easy{
-    background: url(../img/why-easy-bg.jpg) no-repeat top center;
+    background-color: #f3f3f3;
+
+    @media @tablet {
+        background: url(../img/why-easy-bg.jpg) no-repeat top center;
+        background-color: #f3f3f3;
+    }
+
+    &__block-wrap{
+        padding-top: 15px;
+
+        @media @tablet {
+            padding-top: 30px;
+        }
+    }
+
+    &__left-wrap{
+        padding-right: .5rem;
+        @media @tablet {
+            padding-right: 0px;
+        }
+    }
+
+    &__right-wrap{
+        padding-left: .5rem;
+        @media @tablet {
+            padding-left: 0px;
+        }
+    }
+
+    &__left-block{
+        background-color: #000;
+        padding: 20px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    &__right-block{
+        background-color: #fff;
+        padding: 20px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    &__subtitle{
+        font-family: @regular-font;
+        color: #000;
+        font-size: 20px;
+        position: relative;
+        padding-bottom: 16px;
+
+        @media @tablet {
+            font-size: 23px; 
+        }
+
+        &:after{
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:30%;
+            border-top: 3px solid @primary-color;
+            content:"";
+        }
+
+        &_left{
+            color: #fff;
+        }
+
+        &_right{
+            color: #000;
+        }
+    }
+
+    &__list{
+        font-family: @regular-font;
+        font-weight: 100;
+        font-size: 16px;
+
+        @media @tablet {
+            font-size: 17px; 
+        }
+
+        &_left{
+            color: #fff;
+        }
+
+        &_right{
+            color: #000;
+        }
+    }
+
+    &__list-item{
+        padding: 10px 0px;
+
+        @media @tablet {
+            padding: 13px 0px;
+        }
+    }
 }

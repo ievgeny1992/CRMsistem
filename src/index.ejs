@@ -103,10 +103,17 @@
 
 <section class="we-do">
     <div class="wrap we-do__wrap container-fluid">
-        <img src="img/success.svg" alt="success" class="we-do__success-img">
-        <img src="img/graph1.svg" alt="graph" class="we-do__graph-img">
-        <img src="img/diagram2.svg" alt="diagram2" class="we-do__diagram-img">
-        <img src="img/diagram.svg" alt="diagram" class="we-do__diagram-circle-img">
+        <% const imagesList = [
+            {src: 'success.svg', class: 'we-do__success-img'},
+            {src: 'graph1.svg', class: 'we-do__graph-img'},
+            {src: 'diagram2.svg', class: 'we-do__diagram-img'},
+            {src: 'diagram.svg', class: 'we-do__diagram-circle-img'}
+        ]; %>
+
+        <% imagesList.forEach((item) => { %>
+            <img src="img/<%= item.src %>" alt="success" class="<%= item.class %>">
+        <% }) %>
+
         <div class="row end-xs">
             <div class="page-number page-number_white">
                 <span class="page-number__current page-number__current_white">
@@ -201,22 +208,24 @@
                     </h3>
 
                     <% const futureBusinessList = [
-                        {text: 'Первоначальные взносы всего лишь'},
-                        {text: 'Возможное число отправок'},
-                        {text: 'Ваш ежемесячный расход'},
-                        {text: 'Ваш ежемесячный доход'},
-                        {text: 'Ваша чистая прибыль'}
+                        {text: 'Первоначальные взносы всего лишь', progress: '15'},
+                        {text: 'Возможное число отправок', progress: '100'},
+                        {text: 'Ваш ежемесячный расход', progress: '10'},
+                        {text: 'Ваш ежемесячный доход', progress: '35'},
+                        {text: 'Ваша чистая прибыль', progress: '100'}
                     ]; %>
 
                     <% futureBusinessList.forEach((item) => { %>
-                        <div class="row future-business">
+                        <div class="row middle-xs between-xs future-business">
                             <div class="col-xs">
                                 <p class="future-business__text">
                                     <%= item.text %>
                                 </p>
                             </div>
                             <div class="col-xs">
-                                <p>sdaadsa</p>
+                                <div class="progress__wrap">
+                                    <div data-progress="<%= item.progress %>" class="future-business__progress future-business__progress_full"></div>
+                                </div>
                             </div>
                         </div>  
                     <% }) %>
@@ -245,10 +254,57 @@
                 </h2>
             </div>
         </div>
+        <div class="row why-easy__block-wrap">
+            <div class="col-sm-6 col-xs-12 why-easy__left-wrap">
+                <div class="why-easy__left-block">
+                    <h3 class="why-easy__subtitle why-easy__subtitle_left">
+                        Чем будет забита ваша голова, если вы все будете делать сами
+                    </h3>
+                    <% const leftBlockList = [
+                        {text: 'Какое юр.лицо зарегистрировать?'},
+                        {text: 'А что сейчас вообще продается?'},
+                        {text: 'А где найти товар?'},
+                        {text: 'Ваш ежемесячный доход'},
+                        {text: 'А где найти качественный товар?'},
+                        {text: 'Почему нет заказов?'},
+                        {text: 'Совсем ни одного!'},
+                        {text: 'Я нашел товар, а он не продается :('},
+                        {text: 'Есть один клиент! Но как начать с ним разговор?'},
+                        {text: 'Клиент отменил заказ, что делать?'}
+                    ]; %>
+                    <ul class="why-easy__list why-easy__list_left">
+                        <% leftBlockList.forEach((item) => { %>
+                            <li class="why-easy__list-item"><%= item.text %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12 why-easy__right-wrap">
+                <div class="why-easy__right-block">
+                    <h3 class="why-easy__subtitle why-easy__subtitle_right">
+                        Чем будет забита ваша голова, если вы начнете работу с нами
+                    </h3>
+                    <% const rightBlockList = [
+                        {text: 'Не знал, что есть столько популярных товаров'},
+                        {text: 'Интересно, откуда же столько клиентов'},
+                        {text: 'Может взять офис для колл-центра побольше, сотрудников уже явно не хватает'},
+                        {text: 'А не попросить ли курьерку переводить деньги раз в неделю, а то раз в месяц мне уже недостаточно'},
+                        {text: 'На какой курорт полететь?'}
+                    ]; %>
+                    <ul class="why-easy__list why-easy__list_right">
+                        <% rightBlockList.forEach((item) => { %>
+                            <li class="why-easy__list-item"><%= item.text %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+<!--Scripts-->
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/script.js"></script>
+<!--Scripts-->
 </body>
 </html>
