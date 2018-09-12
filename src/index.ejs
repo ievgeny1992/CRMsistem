@@ -274,7 +274,7 @@
                     ]; %>
                     <ul class="why-easy__list why-easy__list_left">
                         <% leftBlockList.forEach((item) => { %>
-                            <li class="why-easy__list-item"><%= item.text %></li>
+                            <li class="why-easy__list-item"><span class="why-easy__list-item-text_left"><%= item.text %></span></li>
                         <% }) %>
                     </ul>
                 </div>
@@ -293,7 +293,7 @@
                     ]; %>
                     <ul class="why-easy__list why-easy__list_right">
                         <% rightBlockList.forEach((item) => { %>
-                            <li class="why-easy__list-item"><%= item.text %></li>
+                            <li class="why-easy__list-item"><span class="why-easy__list-item-text_right"><%= item.text %></span></li>
                         <% }) %>
                     </ul>
                 </div>
@@ -301,6 +301,74 @@
         </div>
     </div>
 </section>
+<section class="work-conditions">
+    <div class="wrap container-fluid">
+        <div class="row end-xs">
+            <div class="page-number page-number_black">
+                <span class="page-number__current page-number__current_black">
+                    06
+                </span>
+                <span class="page-number__all">
+                    07
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-xs-12">
+                <h2 class="regular-title regular-title_black">
+                    Почему с нами легче?
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="work-conditions__top-text">
+                    Первая консультация - бесплатная, как и все последующие. Но с чего мы зарабатываем?
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9 col-sm-offset-3">
+                <div class="work-conditions__info-wrap">
+                    <img src="img/partners.svg" alt="partners" class="work-conditions__info-img">
+                    <h4 class="work-conditions__info-title">
+                        У нас есть партнерские отношения со всеми участниками этого бизнеса
+                    </h4>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <% const badgeTextList = [
+                                {text: 'SMS-провайдер'},
+                                {text: 'провайдер SIP-телефонии'},
+                                {text: 'CRM система LeadVertex'},
+                                {text: 'Курьерская служба Yon Kargo'},
+                                {text: 'Производитель товаров Yon Kargo'},
+                                {text: 'Колл-центр'}
+                            ]; %>
+
+                            <% badgeTextList.forEach((item) => { %>
+                                <div class="work-conditions__info-badge">
+                                    <span class="work-conditions__info-badge-text">
+                                        <%= item.text %>
+                                    </span>
+                                </div>
+                            <% }) %>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="work-conditions__top-text">
+                    Наше основное требование - это необходимость работать именно с этими службами, скоторыми мы сотрудничаем, так как именно от них мы получаем свое вознаграждение.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!--Scripts-->
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>

@@ -19,8 +19,13 @@ body{
     box-sizing: border-box;
     max-width: 1280px;
     margin: 0px auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media @tablet {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 .page-number{
@@ -522,9 +527,106 @@ body{
 
     &__list-item{
         padding: 10px 0px;
+        color: @primary-color;
 
         @media @tablet {
             padding: 13px 0px;
+        }
+
+        &-text_right{
+            color: #000;
+        }
+
+        &-text_left{
+            color: #fff;
+        }
+    }
+}
+
+.work-conditions{
+    background-color: #f3f3f3;
+
+    @media @tablet {
+        padding-bottom: 40px;
+    }
+
+    &__top-text{
+        font-family: @regular-font;
+        font-weight: 100;
+        color: #000;
+        line-height: 22px;
+        font-size: 14px;
+
+        @media @tablet {
+            padding-top: 30px;
+            font-size: 16px;
+        }
+    }
+
+    &__info-wrap{
+        position: relative;
+        width: 100%;
+        padding-top: 0px;
+
+        @media @tablet {
+            padding-top: 15px;
+        }
+    }
+
+    &__info-img{
+        position: absolute;
+        display: none;
+
+        @media @tablet {
+            display: block;
+            width: 230px;
+            left: -255px;
+            top: 60px;
+        }
+
+        @media @desktop {
+            width: 250px;
+            left: -330px;
+            top: 45px;
+        }
+    }
+
+    &__info-title{
+        font-family: @regular-font;
+        font-weight: 200;
+        color: #000;
+        font-size: 20px;
+
+        @media @tablet {
+            font-size: 26px;
+        }
+    }
+
+    &__info-badge{
+        background-color: #e23d41;
+        display: inline-block;
+        padding: 11px 10px;
+        margin: 0 10px 10px 0;
+
+        @media @tablet {
+            padding: 11px 15px;
+            margin: 0 15px 20px 0;
+        }
+
+        @media @desktop {
+            padding: 11px 50px;
+            margin: 0 20px 20px 0px;
+        }
+
+        &-text{
+            font-family: @regular-font;
+            font-weight: 100;
+            color: #fff;
+            font-size: 14px;
+            
+            @media @tablet {
+                font-size: 16px;
+            }
         }
     }
 }
