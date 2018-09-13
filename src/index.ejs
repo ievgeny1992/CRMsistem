@@ -353,8 +353,6 @@
                                 </div>
                             <% }) %>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -368,6 +366,150 @@
         </div>
     </div>
 </section>
+
+<section class="consultation">
+    <div class="wrap container-fluid">
+        <div class="row end-xs">
+            <div class="page-number page-number_black">
+                <span class="page-number__current page-number__current_black">
+                    07
+                </span>
+                <span class="page-number__all">
+                    07
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-xs-12">
+                <h2 class="regular-title regular-title_black">
+                    Почему с нами легче?
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="consultation__list">
+                    <% const consultationList = [
+                        {text: 'Консультация проводится только текстом, чтобы вся история переписки сохранялась.'},
+                        {text: 'Мы работаем в популярных мессенджерах'},
+                        {text: 'Чтобы заказать консультацию, для начала заполните опрос и оставьте данные о желаемом способе связи. '},
+                        {text: 'Мы проверим ваши данные и сами обратимся к вам в течение 10 минут'}
+                    ]; %>
+
+                    <% consultationList.forEach((item) => { %>
+                        <li class="consultation__item">
+                            <%= item.text %>
+                        </li>
+                    <% }) %>
+                </ul> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="form-block">
+    <div class="wrap container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="form-block__title">
+                    Оставьте заявку
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <form action="" class="main-form">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12">
+                            <label for="" class="main-form__label">ФИО</label>
+                            <input type="text" class="main-form__input">
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <label for="" class="main-form__label">Название Вашей компании</label>
+                            <input type="text" class="main-form__input">
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <label for="" class="main-form__label">Ваш телефон</label>
+                            <input type="text" class="main-form__input">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12">
+                            <label for="" class="main-form__label">Ваш E-mail</label>
+                            <input type="text" class="main-form__input">
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <label for="" class="main-form__label">Планируемый доход</label>
+                            <input type="text" class="main-form__input">
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <label for="" class="main-form__label">ФИО</label>
+                            <input type="text" class="main-form__input">
+                        </div>
+                    </div>
+                    <div class="row center-xs">
+                        <button type="submit"  class="main-form__button">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-block">
+    <div class="wrap container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="contact-block__title">
+                    Свяжитесь с нами
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="contact-block__phone">
+                    <img src="img/phone.svg" alt="phone" class="contact-block__phone-img">
+                    <span class="contact-block__text">
+                        +7 (968) 260 79 30 
+                    </span>
+                </div>   
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="contact-block__mail">
+                    <img src="img/mail.svg" alt="mail" class="contact-block__mail-img">
+                    <span class="contact-block__text">
+                        anna@leadvertex.ru   
+                    </span>
+                </div>   
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrap container-fluid">
+        <div class="row middle-xs">
+            <div class="col-sm-6 col-xs-12">
+                <div class="row middle-xs start-sm center-xs footer__wrap">
+                    <span class="copyright-symbol">
+                        ©
+                    </span>
+                    <span class="footer__text">
+                        2018 «Компания»
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="row end-sm center-xs footer__wrap">
+                    <span class="footer__text">
+                        LTD TutMee<br />Web development<br />Agency
+                    </span>
+                    <img src="img/favicon.svg" alt="logo" class="footer__logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 <!--Scripts-->
