@@ -1,6 +1,7 @@
 @import 'normalize';
 @import 'flexboxgrid';
 @import 'media';
+@import 'custom-radio';
 // @import 'burger-menu';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&subset=cyrillic-ext');
@@ -758,10 +759,12 @@ body{
         font-family: @regular-font;
         font-size: 20px;
         color: #fff;
-        padding: 10px 25px;
+        padding: 15px 25px;
+        margin-top: 25px;
 
         @media @tablet {
             font-size: 24px;
+            margin-top: 0px;
         }
     }
 }
@@ -830,8 +833,15 @@ body{
     &__phone-img{
         position: absolute;
         width: 110px;
-        top: -19px;
+        top: -45px;
         left: -89px;
+
+        @media @tablet {
+            position: absolute;
+            width: 110px;
+            top: -19px;
+            left: -89px;            
+        }
     }
 
     &__mail{

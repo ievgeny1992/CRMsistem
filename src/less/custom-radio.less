@@ -1,0 +1,78 @@
+/* The container */
+.main-form__check-wrap {
+    position: relative;
+    font-family: @regular-font;
+    font-weight: 100;
+    padding-left: 34px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    user-select: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+    float: left;
+    width: 70px;
+
+    @media @tablet {
+        font-size: 20px; 
+        width: 60px;
+    }
+
+    @media @desktop {
+        width: 100px;
+    }
+}
+
+/* Hide the browser's default radio button */
+.main-form__check-wrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.main-form__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #9b9a9a;
+    border-radius: 50%;
+    outline: none;
+}
+
+/* On mouse-over, add a grey background color */
+.main-form__check-wrap:hover input ~ .main-form__checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.main-form__check-wrap input:checked ~ .main-form__checkmark {
+    background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.main-form__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.main-form__check-wrap input:checked ~ .main-form__checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.main-form__check-wrap .main-form__checkmark:after {
+    top: 8px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background:@primary-color;
+    outline: none;
+}
