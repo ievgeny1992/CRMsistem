@@ -2,7 +2,7 @@
 @import 'flexboxgrid';
 @import 'media';
 @import 'custom-radio';
-// @import 'burger-menu';
+@import 'burger-menu';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&subset=cyrillic-ext');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic-ext');
@@ -98,17 +98,85 @@ body{
     background: url(../img/header_bg.jpg) no-repeat top center;
     background-size: cover;
     background-color: #f3f3f3;
+    // height: 100vh;
     
     @media @desktop{
         background: url(../img/header_bg.jpg) no-repeat top right;
         background-color: #f3f3f3;
+        background-size: contain;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        background-color: rgba(243, 243, 243, 0.98);
+        width: 100%;
+        overflow: hidden;
+        top:0;
+        left:0;
+        bottom: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.4s ease;
+        z-index: 1000;
+    }
+
+    &__opened{
+        &:before {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &-menu{
+        &__wrap{
+            position: absolute;
+            margin-top: 70px;
+            z-index: 100000;
+            visibility: hidden;
+            transform: translateX(-50px);
+
+            &_opened{
+                visibility: visible;
+                transform: translateX(0px);  
+                transition: all 0.2s ease;
+            }
+        }
+
+        &__list{
+            list-style-type: none;
+            padding-left: 0px;
+        }
+
+        &__item{
+            font-family: @regular-font;
+            font-weight: 100;
+            color: #000;
+            font-size: 16px;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            box-sizing: border-box;
+            height: 25px;
+
+            @media @tablet {
+                font-size: 24px;
+                padding-bottom: 5px;
+                margin-bottom: 30px;
+                height: 34px;
+            }
+
+            &:hover{
+                border-bottom: 2px solid @primary-color;
+            }
+        }
     }
 
     &__title{
         font-family: @header-font;
         color: #000;
         text-align: center;
-        font-size: 55px;
+        font-size: 45px;
         font-weight: 700;
 
         @media @tablet{
@@ -121,6 +189,40 @@ body{
 
         &_highlight{
             color: @primary-color;
+        }
+    }
+
+    &-bottom{
+        &__wrap{
+            padding-top: 30px;
+
+            @media @tablet {
+                padding-top: 60px;
+            }
+        }
+
+        &__text{
+            position: relative;
+            font-family: @regular-font;
+            color: #000;
+            font-size: 16px;
+            line-height: 26px;
+            padding-bottom: 16px;
+
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 59px;
+                border-top: 3px solid #e23d41;
+                content: "";
+                margin-left: -30px;
+            }
+        }
+
+        &__arrow{
+            width: 32px;
+            padding-top: 20px;
         }
     }
 }
