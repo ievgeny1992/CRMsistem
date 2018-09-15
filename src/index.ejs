@@ -26,16 +26,20 @@
         <div class="header-menu__wrap">
             <ul class="header-menu__list">
                 <% const menuList = [
-                    {text: 'Какой именно бизнес мы организуем под ключ'},
-                    {text: 'Что конкретно делаем мы'},
-                    {text: 'Минимум, нужный от вас'},
-                    {text: 'Почему с нами легче?'},
-                    {text: 'Какие условия работы с нами'},
-                    {text: 'Как заказать консультацию'}
+                    {text: 'Какой именно бизнес мы организуем под ключ', link: 'sale'},
+                    {text: 'Что конкретно делаем мы', link: 'we-do'},
+                    {text: 'Минимум, нужный от вас', link: 'need-you'},
+                    {text: 'Почему с нами легче?', link: 'why-easy'},
+                    {text: 'Какие условия работы с нами', link: 'work-conditions'},
+                    {text: 'Как заказать консультацию', link: 'consultation'}
                 ]; %>
                 <% menuList.forEach((item) => { %>
                     <li class="header-menu__item">
-                        <%= item.text %>
+                        <span class="header-menu__item-text">
+                            <a href="#" data-link="<%= item.link %>" class="js-scroll">
+                                <%= item.text %>
+                            </a>
+                        </span>
                     </li>
                 <% }) %>
             </ul>
@@ -43,7 +47,7 @@
         <div class="row end-xs">
             <div class="page-number page-number_black">
                 <span class="page-number__current page-number__current_black">
-                    02
+                    01
                 </span>
                 <span class="page-number__all">
                     07
@@ -110,7 +114,7 @@
                         </span>
                         <div class="sale-item__box">
                             <img src="img/arrow_black.svg" alt="arrow_black" class="sale-item__arrow">
-                            <img src="img/<%= item.image %>" alt="ico_search">   
+                            <img src="img/<%= item.image %>" alt="ico_search" class="sale-item__icon">   
                         </div>
                         <div class="row">
                             <div class="col-md-8 col-xs-12">
@@ -249,7 +253,7 @@
                             </div>
                             <div class="col-xs">
                                 <div class="progress__wrap">
-                                    <div data-progress="<%= item.progress %>" class="future-business__progress future-business__progress_full"></div>
+                                    <div data-progress="<%= item.progress %>" class="future-business__progress"></div>
                                 </div>
                             </div>
                         </div>  
@@ -326,6 +330,7 @@
         </div>
     </div>
 </section>
+
 <section class="work-conditions">
     <div class="wrap container-fluid">
         <div class="row end-xs">
@@ -341,7 +346,7 @@
         <div class="row">
             <div class="col-md-5 col-xs-12">
                 <h2 class="regular-title regular-title_black">
-                    Почему с нами легче?
+                    Какие условия работы с нами
                 </h2>
             </div>
         </div>
@@ -407,7 +412,7 @@
         <div class="row">
             <div class="col-md-5 col-xs-12">
                 <h2 class="regular-title regular-title_black">
-                    Почему с нами легче?
+                    Как заказать консультацию
                 </h2>
             </div>
         </div>
@@ -555,7 +560,7 @@
 
 
 <!--Scripts-->
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 <!--Scripts-->
 </body>
