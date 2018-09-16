@@ -99,6 +99,27 @@ body{
     background-size: cover;
     background-color: #f3f3f3;
     // height: 100vh;
+
+    &__wrap{
+        position: relative;
+    }
+
+    &__man{
+        position: absolute;
+        bottom: 0px;
+        visibility: hidden;
+
+        @media @tablet {
+            visibility: visible;
+            width: 170px;
+            right: 25px;
+        }
+
+        @media @desktop {
+            width: 200px;
+            right: 150px;
+        }
+    }
     
     @media @desktop{
         background: url(../img/header_bg.jpg) no-repeat top right;
