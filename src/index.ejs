@@ -18,7 +18,7 @@
 <body>
 <section class="header">
     <div class="wrap container-fluid header__wrap">
-        <img src="img/man-1block.svg" alt="man" class="header__man">
+        <img src="img/man-1block.svg" alt="man" class="header__man wow fadeIn" data-wow-delay="0.7s">
         <div class="burger-menu burger-menu--closed js-burger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -238,7 +238,7 @@
                     </h3>
 
                     <% const futureBusinessList = [
-                        {text: 'Первоначальные взносы всего лишь', progress: '15'},
+                        {text: 'Первоначальные взносы всего лишь', progress: 'auto'},
                         {text: 'Возможное число отправок', progress: '100'},
                         {text: 'Ваш ежемесячный расход', progress: '10'},
                         {text: 'Ваш ежемесячный доход', progress: '35'},
@@ -254,7 +254,11 @@
                             </div>
                             <div class="col-xs">
                                 <div class="progress__wrap">
-                                    <div data-progress="<%= item.progress %>" class="future-business__progress"></div>
+                                    <div data-progress="<%= item.progress %>" class="future-business__progress">
+                                        <span>
+                                            10 000 лир
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>  
@@ -562,6 +566,7 @@
 
 <!--Scripts-->
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/wow.min.js"></script>
 <script src="js/script.js"></script>
 <!--Scripts-->
 </body>

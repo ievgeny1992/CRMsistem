@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+    new WOW().init();
+
     var $burgerMenu = $('.js-burger-menu');
     var $burgerText = $('.js-burger-menu__text');
     var $header = $('.header');
