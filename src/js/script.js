@@ -2,6 +2,17 @@ $( document ).ready(function() {
     //WOW
     new WOW().init();
 
+    //Custom WOW
+    var progress = new WOW({
+        boxClass:     'future-business__progress',
+        callback:    
+        function(box) {
+            loadProgress(box);
+            console.log(box);
+        }
+    });
+    progress.init();
+
     //Parallax JS
     var scene = document.getElementById('js-parallax');
     var parallaxInstance = new Parallax(scene);
@@ -11,7 +22,20 @@ $( document ).ready(function() {
     var $header = $('.header');
     var $headerMenuWrap = $('.header-menu__wrap');
     var $jsScroll = $('.js-scroll');
-    var $progress = $('.future-business__progress');
+
+    function loadProgress(self) {
+        value = $(self).data('progress');
+        if ( value !== 'auto' ) {
+            value = value + '%';
+        } else {
+            value = '100px';
+        }
+        $(self).css('width', value);
+
+        if (value == 100) {
+            $(self).addClass('future-business__progress_full')
+        }
+    }
 
     function ShowHideBurgerMenu() {
         $header.toggleClass('header__opened');
@@ -40,14 +64,4 @@ $( document ).ready(function() {
     $burgerMenu.on('click', function() {
         ShowHideBurgerMenu();
     });
-
-    $.each($progress, function() {
-        value = $(this).data('progress');
-        $(this).css('width', value + '%');
-
-        if (value == 100) {
-            $(this).addClass('future-business__progress_full')
-        }
-    });
-
 });
