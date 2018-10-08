@@ -78,6 +78,10 @@
 </section>
 
 <section class="sale">
+    <div class="sale__parallax" id="js-parallax">
+        <!-- sales -->
+        <div data-depth="0.2">sales</div>
+    </div>
     <div class="wrap container-fluid">
         <div class="row end-xs">
             <div class="page-number page-number_black">
@@ -238,11 +242,11 @@
                     </h3>
 
                     <% const futureBusinessList = [
-                        {text: 'Первоначальные взносы всего лишь', progress: 'auto'},
-                        {text: 'Возможное число отправок', progress: '100'},
-                        {text: 'Ваш ежемесячный расход', progress: '10'},
-                        {text: 'Ваш ежемесячный доход', progress: '35'},
-                        {text: 'Ваша чистая прибыль', progress: '100'}
+                        {text: 'Первоначальные взносы всего лишь', progress: 'auto', cost: '10 000 лир', delay: '0.7'},
+                        {text: 'Возможное число отправок', progress: '100', cost: '1 000 в месяц', delay: '0.9'},
+                        {text: 'Ваш ежемесячный расход', progress: 'auto', cost: '10 000 лир', delay: '1.1'},
+                        {text: 'Ваш ежемесячный доход', progress: '60', cost: '150 000 лир', delay: '1.3'},
+                        {text: 'Ваша чистая прибыль', progress: '100', cost: '140 000 лир', delay: '1.5'}
                     ]; %>
 
                     <% futureBusinessList.forEach((item) => { %>
@@ -254,10 +258,14 @@
                             </div>
                             <div class="col-xs">
                                 <div class="progress__wrap">
-                                    <div data-progress="<%= item.progress %>" class="future-business__progress">
-                                        <span>
-                                            10 000 лир
-                                        </span>
+                                    <div data-progress="<%= item.progress %>" class="future-business__progress end-xs">
+                                        <div class="row middle-xs">
+                                            <div class="col-xs">
+                                                <span class="progress__text wow	fadeInRight" data-wow-delay="<%= item.delay %>s">
+                                                    <%= item.cost %>
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -566,6 +574,7 @@
 
 <!--Scripts-->
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/script.js"></script>
 <!--Scripts-->

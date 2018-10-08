@@ -1,5 +1,10 @@
 $( document ).ready(function() {
+    //WOW
     new WOW().init();
+
+    //Parallax JS
+    var scene = document.getElementById('js-parallax');
+    var parallaxInstance = new Parallax(scene);
 
     var $burgerMenu = $('.js-burger-menu');
     var $burgerText = $('.js-burger-menu__text');

@@ -278,16 +278,19 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
 
-    &:after{
+    &__parallax{
         font-family: @header-font;
         position: absolute;
         top: 50%;
         left: 35%;
+        margin-top: -345px;
         transform: translate(0, -50%);
         color: #f3f3f3;
         font-size: 600px;
         font-weight: 700;
-        content: "sales";
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        pointer-events: none;
     }
 
     &__wrap{
@@ -554,10 +557,11 @@ body{
     }
 
     &__progress{
+        display: flex;
         position: relative;
         background-color: @primary-color;
         height: 30px;
-        // width: 100%;
+        padding: 0px 10px 0px 10px;
 
         &_full{
             &:before{
@@ -573,10 +577,18 @@ body{
     }
 }
 
-.progress__wrap{
-    display: flex;
-    justify-content: flex-end;
-    text-align: end;
+.progress{
+    &__wrap{
+        display: flex;
+        justify-content: flex-end;
+        text-align: end;
+    }
+
+    &__text{
+        font-family: @regular-font;
+        color: #fff;
+        font-weight: 300;
+    }
 }
 
 .why-easy{
