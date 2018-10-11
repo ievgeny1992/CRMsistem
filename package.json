@@ -10,7 +10,7 @@
   "author": "Evgeniy Nadolinskiy",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.0",
     "eslint": "^3.19.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.10.0",
