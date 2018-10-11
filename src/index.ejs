@@ -18,7 +18,7 @@
 <body>
 <section class="header">
     <div class="wrap container-fluid header__wrap">
-        <img src="img/man-1block.svg" alt="man" class="header__man wow fadeIn" data-wow-delay="0.7s">
+        <img src="img/man-1block.svg" alt="man" class="header__man wow fadeIn" data-wow-delay="0.6s">
         <div class="burger-menu burger-menu--closed js-burger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -103,17 +103,17 @@
         <div class="row sale__wrap start-sm center-xs">
 
             <% const saleItems = [
-                {text: 'У вас есть товары.', image: 'box.svg', number: '01'},
-                {text: 'Они рекламируются на сайтах в интернете.', image: '02.svg', number: '02'},
-                {text: 'Клиенты делают заказы, ваш колл-центр обрабатывает их.', image: 'call-center.svg', number: '03'},
-                {text: 'Подтвержденные заказы клиентов отдаются на упаковку, а далее отправляются через курьерскую службу вашим клиентам.', image: 'clipboard.svg', number: '04'},
-                {text: 'При получении заказа клиент оплачивает его на месте курьеру.', image: 'ticket.svg', number: '05'},
-                {text: 'Курьер приносит деньги в курьерскую службу, а та в свою очередь переводит их вам на расчетный счет вашей компании.', image: '06.svg', number: '06'}
+                {text: 'У вас есть товары.', image: 'box.svg', number: '01', delay: '0.5'},
+                {text: 'Они рекламируются на сайтах в интернете.', image: '02.svg', number: '02', delay: '0.9'},
+                {text: 'Клиенты делают заказы, ваш колл-центр обрабатывает их.', image: 'call-center.svg', number: '03', delay: '1.3'},
+                {text: 'Подтвержденные заказы клиентов отдаются на упаковку, а далее отправляются через курьерскую службу вашим клиентам.', image: 'clipboard.svg', number: '04', delay: '1.7'},
+                {text: 'При получении заказа клиент оплачивает его на месте курьеру.', image: 'ticket.svg', number: '05', delay: '2.1'},
+                {text: 'Курьер приносит деньги в курьерскую службу, а та в свою очередь переводит их вам на расчетный счет вашей компании.', image: '06.svg', number: '06', delay: '2.5'}
             ]; %>
 
             <% saleItems.forEach((item) => { %>
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="sale-item">
+                    <div class="sale-item wow fadeIn" data-wow-delay="<%= item.delay %>s">
                         <span class="sale-item__count">
                             <%= item.number %>
                         </span>
@@ -138,14 +138,14 @@
 <section class="we-do">
     <div class="wrap we-do__wrap container-fluid">
         <% const imagesList = [
-            {src: 'success.svg', class: 'we-do__success-img'},
-            {src: 'graph1.svg', class: 'we-do__graph-img'},
-            {src: 'diagram2.svg', class: 'we-do__diagram-img'},
-            {src: 'diagram.svg', class: 'we-do__diagram-circle-img'}
+            {src: 'success.svg', class: 'we-do__success-img', delay: '0.5'},
+            {src: 'graph1.svg', class: 'we-do__graph-img', delay: '1'},
+            {src: 'diagram2.svg', class: 'we-do__diagram-img', delay: '1.5'},
+            {src: 'diagram.svg', class: 'we-do__diagram-circle-img', delay: '2'}
         ]; %>
 
         <% imagesList.forEach((item) => { %>
-            <img src="img/<%= item.src %>" alt="success" class="<%= item.class %>">
+            <img src="img/<%= item.src %>" alt="success" class="<%= item.class %> wow fadeIn" data-wow-delay="<%= item.delay %>s">
         <% }) %>
 
         <div class="row end-xs">
@@ -166,7 +166,7 @@
             </div>
         </div>
         <div class="row center-xs we-do__wrap-items">
-            <img src="img/mans_3block.svg" alt="mans_3block" class="we-do__3mans-img">
+            <img src="img/mans_3block.svg" alt="mans_3block" class="we-do__3mans-img wow fadeIn" data-wow-delay="2.5s">
             <% const wedoList = [
                 {text: 'Даем бесплатную консультацию о вашем будущем бизнесе'},
                 {text: 'Уточняем у вас о желаемых доходах от вашего бизнеса'},
@@ -217,19 +217,19 @@
             <div class="col-sm-6 col-xs-12 need-you__wrap">
                 <div class="need-you__left-block">
                     <% const needYouList = [
-                        {text: 'Регистрация юридического лица (мы не начинаем работать с физлицами, доходы будут высокими)'},
-                        {text: 'Открытие банковского счета'},
-                        {text: 'Аренда офиса под колл-центр по нашим рекомендациям'}
+                        {text: 'Регистрация юридического лица (мы не начинаем работать с физлицами, доходы будут высокими)' ,delay: '0.3'},
+                        {text: 'Открытие банковского счета' ,delay: '0.7'},
+                        {text: 'Аренда офиса под колл-центр по нашим рекомендациям' ,delay: '1.1'}
                     ]; %>
 
                     <ul class="need-you-list">
                         <% needYouList.forEach((item) => { %>
-                            <li class="need-you-list__item">
+                            <li class="need-you-list__item wow fadeIn" data-wow-delay="<%= item.delay %>s">
                                     <%= item.text %>
                             </li>
                         <% }) %>
                     </ul>
-                    <img src="img/vse.svg" alt="vse" class="need-you__vse">
+                    <img src="img/vse.svg" alt="vse" class="need-you__vse wow fadeIn" data-wow-delay="1.4s">
                     <p class="need-you__text">
                         Остальное - ваше желание и готовность следовать нашим рекомендациям!
                     </p>
@@ -323,6 +323,7 @@
             </div>
             <div class="col-sm-6 col-xs-12 why-easy__right-wrap">
                 <div class="why-easy__right-block">
+                    <img src="img/man_5block.svg" alt="man_5block" class="why-easy__mans-img wow fadeIn" data-wow-delay="0.5s">
                     <h3 class="why-easy__subtitle why-easy__subtitle_right">
                         Чем будет забита ваша голова, если вы начнете работу с нами
                     </h3>
@@ -373,23 +374,23 @@
         <div class="row">
             <div class="col-sm-9 col-sm-offset-3">
                 <div class="work-conditions__info-wrap">
-                    <img src="img/partners.svg" alt="partners" class="work-conditions__info-img">
+                    <img src="img/partners.svg" alt="partners" class="work-conditions__info-img wow fadeIn" data-wow-delay="0.3s">
                     <h4 class="work-conditions__info-title">
                         У нас есть партнерские отношения со всеми участниками этого бизнеса
                     </h4>
                     <div class="row">
                         <div class="col-xs-12">
                             <% const badgeTextList = [
-                                {text: 'SMS-провайдер'},
-                                {text: 'провайдер SIP-телефонии'},
-                                {text: 'CRM система LeadVertex'},
-                                {text: 'Курьерская служба Yon Kargo'},
-                                {text: 'Производитель товаров Yon Kargo'},
-                                {text: 'Колл-центр'}
+                                {text: 'SMS-провайдер', delay: '0.6'},
+                                {text: 'провайдер SIP-телефонии', delay: '0.9'},
+                                {text: 'CRM система LeadVertex', delay: '1.2'},
+                                {text: 'Курьерская служба Yon Kargo', delay: '1.5'},
+                                {text: 'Производитель товаров Yon Kargo', delay: '1.8'},
+                                {text: 'Колл-центр', delay: '2.1'}
                             ]; %>
 
                             <% badgeTextList.forEach((item) => { %>
-                                <div class="work-conditions__info-badge">
+                                <div class="work-conditions__info-badge wow fadeIn" data-wow-delay="<%= item.delay %>s">
                                     <span class="work-conditions__info-badge-text">
                                         <%= item.text %>
                                     </span>
@@ -433,14 +434,14 @@
             <div class="col-xs-12">
                 <ul class="consultation__list">
                     <% const consultationList = [
-                        {text: 'Консультация проводится только текстом, чтобы вся история переписки сохранялась.'},
-                        {text: 'Мы работаем в популярных мессенджерах'},
-                        {text: 'Чтобы заказать консультацию, для начала заполните опрос и оставьте данные о желаемом способе связи. '},
-                        {text: 'Мы проверим ваши данные и сами обратимся к вам в течение 10 минут'}
+                        {text: 'Консультация проводится только текстом, чтобы вся история переписки сохранялась.', delay: '0.3'},
+                        {text: 'Мы работаем в популярных мессенджерах', delay: '0.6'},
+                        {text: 'Чтобы заказать консультацию, для начала заполните опрос и оставьте данные о желаемом способе связи. ', delay: '0.9'},
+                        {text: 'Мы проверим ваши данные и сами обратимся к вам в течение 10 минут', delay: '1.2'}
                     ]; %>
 
                     <% consultationList.forEach((item) => { %>
-                        <li class="consultation__item">
+                        <li class="consultation__item wow fadeIn" data-wow-delay="<%= item.delay %>s">
                             <%= item.text %>
                         </li>
                     <% }) %>
@@ -528,7 +529,7 @@
         <div class="row">
             <div class="col-sm-6 col-xs-12">
                 <div class="contact-block__phone">
-                    <img src="img/phone.svg" alt="phone" class="contact-block__phone-img">
+                    <img src="img/phone.svg" alt="phone" class="contact-block__phone-img wow fadeIn" data-wow-delay="0.4s">
                     <span class="contact-block__text">
                         +7 (968) 260 79 30 
                     </span>
@@ -536,7 +537,7 @@
             </div>
             <div class="col-sm-6 col-xs-12">
                 <div class="contact-block__mail">
-                    <img src="img/mail.svg" alt="mail" class="contact-block__mail-img">
+                    <img src="img/mail.svg" alt="mail" class="contact-block__mail-img wow fadeIn" data-wow-delay="0.7s">
                     <span class="contact-block__text">
                         anna@leadvertex.ru   
                     </span>

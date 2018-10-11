@@ -25,16 +25,18 @@ $( document ).ready(function() {
 
     function loadProgress(self) {
         value = $(self).data('progress');
+
+        if (value == 100) {
+            $(self).addClass('future-business__progress_full')
+        }
+
         if ( value !== 'auto' ) {
             value = value + '%';
         } else {
             value = '100px';
         }
+        
         $(self).css('width', value);
-
-        if (value == 100) {
-            $(self).addClass('future-business__progress_full')
-        }
     }
 
     function ShowHideBurgerMenu() {

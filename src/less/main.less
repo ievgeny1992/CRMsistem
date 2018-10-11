@@ -108,10 +108,10 @@ body{
     &__man{
         position: absolute;
         bottom: 0px;
-        visibility: hidden;
+        display: none;
 
         @media @tablet {
-            visibility: visible;
+            display: block;
             width: 170px;
             right: 25px;
         }
@@ -591,6 +591,15 @@ body{
         font-family: @regular-font;
         color: #fff;
         font-weight: 300;
+        font-size: 14px;
+
+        @media @tablet {
+            font-size: 15px;
+        } 
+
+        @media @desktop {
+            font-size: 16px;
+        } 
     }
 }
 
@@ -600,6 +609,25 @@ body{
     @media @tablet {
         background: url(../img/why-easy-bg.jpg) no-repeat top center;
         background-color: #f3f3f3;
+    }
+
+    &__mans-img{
+        position: absolute;
+        display: none;
+
+        @media @tablet {
+            display: block;
+            bottom: 0;
+            right: 9px;
+            width: 111px;
+        }
+
+        @media @desktop {
+            display: block;
+            bottom: 0px;
+            right: 41px;
+            width: 160px;
+        }
     }
 
     &__block-wrap{
@@ -632,6 +660,7 @@ body{
     }
 
     &__right-block{
+        position: relative;
         background-color: #fff;
         padding: 20px;
         height: 100%;
